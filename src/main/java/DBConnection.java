@@ -6,7 +6,7 @@ import java.sql.Statement;
 
 public class DBConnection {
     private static DBConnection dbConnection;
-    private Connection connection;
+    private final Connection connection;
     @SneakyThrows
     private DBConnection() {
     connection = DriverManager.getConnection("jdbc:sqlite:db.sqlite3");
