@@ -1,21 +1,19 @@
 package adapter.task2;
 
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MessageSenderTest {
-    MessageSender ms = new MessageSender();
-    @BeforeEach
-    void createMessageSender() {
-    }
+
+
 
     @Test
     void send() {
+        MessageSender ms = new MessageSender();
         Login login = new Login();
         List<Client> clients = List.of(
                 new FacebookClient(
@@ -56,7 +54,7 @@ class MessageSenderTest {
                         + "about your car's expired warranty",
                 clients,
                 "Ukraine");
-        assertEquals(sent,
+        Assertions.assertEquals(sent,
                 List.of(false, false, false, false, true, false, true, true));
 
     }
