@@ -2,9 +2,9 @@ package adapter.task2;
 
 import java.time.LocalDate;
 
-public class TwitterClient implements Client{
+public class TwitterClient implements Client {
     private final TwitterUser user;
-    public TwitterClient(TwitterUser user){
+    public TwitterClient(TwitterUser user) {
         this.user = user;
     }
 

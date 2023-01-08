@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class FacebookClient implements Client {
 
     private final FacebookUser user;
-    public FacebookClient(FacebookUser user){
+    public FacebookClient(FacebookUser user) {
         this.user = user;
     }
 
