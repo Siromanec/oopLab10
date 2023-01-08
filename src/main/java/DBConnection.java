@@ -12,13 +12,13 @@ public class DBConnection {
     connection = DriverManager.getConnection("jdbc:sqlite:db.sqlite3");
     }
     public static DBConnection getInstance() {
-        if(dbConnection == null){
+        if (dbConnection == null) {
             dbConnection = new DBConnection();
         }
         return dbConnection;
     }
     @SneakyThrows
-    public void executeQuery(String query){
+    public void executeQuery(String query) {
         Statement statement = connection.createStatement();
         statement.executeUpdate(query);
         statement.close();
