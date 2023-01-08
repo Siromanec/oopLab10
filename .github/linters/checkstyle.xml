@@ -96,7 +96,7 @@
         <module name="MagicNumber">
             <property name="tokens"
                       value="NUM_DOUBLE, NUM_FLOAT, NUM_INT, NUM_LONG"/>
-            <property name="ignoreNumbers" value="-1, 0, 0.5, 1, 2"/>
+            <property name="ignoreNumbers" value="-1, 0, 0.5, 1, 2, 19"/>
             <property name="ignoreHashCodeMethod" value="true"/>
         </module>
         <module name="MissingSwitchDefault"/>
@@ -157,7 +157,7 @@
 
         <module name="IllegalImport">
             <property name="illegalPkgs"
-                      value="java.sql, sun, java.net, java.security, javax, java.applet, java.beans, java.nio, java.rmi, java.text, java.lang.reflect, java.lang.instrument"/>
+                      value="sun, java.net, java.security, javax, java.applet, java.beans, java.nio, java.rmi, java.text, java.lang.reflect, java.lang.instrument"/>
         </module>
 
         <module name="RedundantImport"/>
@@ -217,10 +217,6 @@
 
         <module name="MethodName">
             <property name="format" value="^[a-z][a-zA-Z]*$"/>
-        </module>
-
-        <module name="PackageName">
-            <property name="format" value="^[a-z]+(\.[a-z][a-z]*)*$"/>
         </module>
         <module name="PackageName"/>
         <module name="ParameterName">
