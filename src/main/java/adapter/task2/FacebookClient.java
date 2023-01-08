@@ -23,4 +23,10 @@ public class FacebookClient implements Client {
     public LocalDate getDate() {
         return user.getGetUserActiveTime();
     }
+
+    @Override
+    public boolean send(String text) {
+        return (user.sendMessage(text).equals("Seen"));
+    }
+
 }

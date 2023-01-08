@@ -22,4 +22,9 @@ public class TwitterClient implements Client{
     public LocalDate getDate() {
         return LocalDate.parse(user.getLastActiveTime());
     }
+
+    @Override
+    public boolean send(String text) {
+        return user.sendDM(text);
+    }
 }

@@ -3,15 +3,15 @@ package adapter.task2;
 import java.time.LocalDate;
 
 public class Login {
-    public Client login(String loginMethod){
+    public Client login(String loginMethod, String email) {
         if (loginMethod.equals("twitter")) {
-            return new TwitterClient(new TwitterUser("a@mail.com", "Ukraine","2022"));
+            return new TwitterClient(new TwitterUser(email, "Ukraine",LocalDate.now().toString()));
         } else if (loginMethod.equals("facebook")) {
-            return new FacebookClient(new FacebookUser("a@mail.com", Country.Ukraine, LocalDate.now()));
+            return new FacebookClient(new FacebookUser(email, Country.Ukraine, LocalDate.now()));
+        } else {
+            throw new IllegalArgumentException("No such loginMethod");
         }
-//        else {
-//        throw new IllegalAccessException("No such login method");
-//        }
-        return null;
     }
+
+
 }
